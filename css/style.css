@@ -743,11 +743,7 @@ img {
   }
 }
 @media screen and (max-width: 768px) {
-  .about {
-    /*&__box {
-        gap: 20px;
-    }*/
-  }
+  
   .about__img-big {
     display: none;
   }
@@ -768,24 +764,7 @@ img {
   }
 }
 @media screen and (max-width: 655px) {
-  .about {
-    /*&__small {
-        display: flex;
-        flex-direction: column;
-        top: 20px;
-        left: 300px;
-    }*/
-    /*&__images {
-        width: 100%;
-    }
-
-    &__img {
-
-        &--next {
-            display: block;
-        }
-    }*/
-  }
+  
   .about .title {
     font-size: 1.875em;
   }
