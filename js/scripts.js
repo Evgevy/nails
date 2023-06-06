@@ -50,6 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+$(document).ready(function(){
+    $(".foto__items").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    })
+})
+
 $(document).ready(function (){
     $(".header__burger").click(function(){
         $(".header__nav").toggleClass("header__nav--open")
@@ -60,7 +72,6 @@ $(document).ready(function (){
     })
 
 })
-
 $(document).ready(function(){
     $(".master__items").slick({
         //prevArrow:".more__button-prev",
