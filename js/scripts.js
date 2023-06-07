@@ -61,7 +61,6 @@ $(document).ready(function(){
         autoplaySpeed: 3000,
     })
 })
-
 $(document).ready(function (){
     $(".header__burger").click(function(){
         $(".header__nav").toggleClass("header__nav--open")
@@ -72,6 +71,7 @@ $(document).ready(function (){
     })
 
 })
+
 $(document).ready(function(){
     $(".master__items").slick({
         //prevArrow:".more__button-prev",
