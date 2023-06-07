@@ -71,6 +71,7 @@ $(document).ready(function (){
     })
 
 })
+
 $(document).ready(function(){
     $(".master__items").slick({
         //prevArrow:".more__button-prev",
@@ -84,7 +85,6 @@ $(document).ready(function(){
         arrows: false,
     })
 })
-
 $(document).ready(function(){
     $(".portfolio__items").slick({
         prevArrow:".portfolio__button-prev",
