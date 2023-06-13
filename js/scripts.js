@@ -1,3 +1,4 @@
+
 const prodBtn = document.querySelectorAll('.about__btn');
 const tabsInfo = document.querySelectorAll('.about__info');
 
@@ -21,18 +22,7 @@ for (let item of prodBtn) {
     })
 }
 
-/*for (let item of prodBtn) {
 
-    item.addEventListener('click', function() {
-
-        for (let element of tabsBox) {
-            element.classList.remove('about__box--active')
-        }
-
-        const cont = document.querySelector('#' + item.dataset.tab);
-        cont.classList.add('about__box--active')
-    })
-}*/
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -49,6 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+$(document).ready(function(){
+    $(".foto1__items").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+       // autoplay: true,
+        //autoplaySpeed: 3000,
+        fade: true,
+    })
+})
+
 
 $(document).ready(function(){
     $(".foto__items").slick({
@@ -57,10 +60,20 @@ $(document).ready(function(){
         infinite: true,
         dots: true,
         arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        fade: true,
+        
+        
+       
+        
+        
+        //autoplay: true,
+        //autoplaySpeed: 3000,
+        
     })
 })
+
+
+
 $(document).ready(function (){
     $(".header__burger").click(function(){
         $(".header__nav").toggleClass("header__nav--open")
@@ -71,6 +84,47 @@ $(document).ready(function (){
     })
 
 })
+
+
+$(document).ready(function(){
+    $(".portfolio__items").slick({
+        prevArrow:".portfolio__button-prev",
+        nextArrow:".portfolio__button-next",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: true,
+        responsive: [{
+            breakpoint: 769,
+            settings: "unslick",
+            
+        }]
+    })
+})
+
+
+
+
+$(document).ready(function(){
+    $(".portfolio__prev").click(function(){
+        if ($(this).siblings(".portfolio__pull").hasClass("portfolio__pull--open")){
+            $(this).siblings(".portfolio__pull").removeClass("portfolio__pull--open")
+            $(this).removeClass("portfolio__prev--open")
+            
+        } else {
+            $(".portfolio__pull").removeClass("portfolio__pull--open")
+            $(this).siblings(".portfolio__pull").addClass("portfolio__pull--open")
+            $(".portfolio__prev").removeClass("portfolio__prev--open")
+            $(this).addClass("portfolio__prev--open")
+           
+        }
+        
+    })
+})
+
+
+
 
 $(document).ready(function(){
     $(".master__items").slick({
@@ -85,17 +139,3 @@ $(document).ready(function(){
         arrows: false,
     })
 })
-$(document).ready(function(){
-    $(".portfolio__items").slick({
-        prevArrow:".portfolio__button-prev",
-        nextArrow:".portfolio__button-next",
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-        arrows: true,
-    })
-})
-
-
-
