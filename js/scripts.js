@@ -1,6 +1,3 @@
-
-
-
 const prodBtn = document.querySelectorAll('.about__btn');
 const tabsInfo = document.querySelectorAll('.about__info');
 
@@ -39,35 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-new Swiper ('.foto__slider', {
-  // Optional parameters
-  slidesPerView: 1,
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-  el: '.swiper-pagination',
-  clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-  nextEl: '.swiper-button-next',
-  prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-  el: '.swiper-scrollbar',
-  },
-
-  spaceBetween: 10,
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-});
-
-
 
 
 
@@ -103,7 +71,39 @@ new Swiper ('.foto1__slider', {
 
   
 
-new Swiper ('.foto4__slider', {
+new Swiper ('.foto__slider', {
+  // Optional parameters
+  slidesPerView: 1,
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+  el: '.swiper-scrollbar',
+  },
+
+  spaceBetween: 10,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+});
+
+
+
+
+
+new Swiper ('.foto2__slider', {
     // Optional parameters
     slidesPerView: 1,
     loop: true,
@@ -157,7 +157,7 @@ new Swiper ('.foto3__slider', {
     observeParents: true,
     observeSlideChildren: true,
   });
-new Swiper ('.foto2__slider', {
+new Swiper ('.foto4__slider', {
     // Optional parameters
     slidesPerView: 1,
     loop: true,
@@ -222,19 +222,49 @@ $(document).ready(function (){
 
 })
 
-$(document).ready(function(){
-    $(".master__items").slick({
-        //prevArrow:".more__button-prev",
-        //nextArrow:".more__button-next",
-        vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-        arrows: false,
-    })
-})
+new Swiper ('.master__slider', {
+    direction: getDirection(),
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 4000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        }
+    }
+});
+
+function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 768 ? 'horizontal' : 'vertical';
+
+    return direction;
+}
+
+
+/*breakpoints: {
+        
+    320: {
+        direction: "horizontal",
+        slidesPerView: 1,
+      
+    },
+    
+    /*1000: {
+        direction: "horizontal",
+        slidesPerView: 1,
+       
+    },*/
+
+
 $(document).ready(function(){
     $(".portfolio__items").slick({
         prevArrow:".portfolio__button-prev",
@@ -273,8 +303,6 @@ $(document).ready(function(){
         
     })
 })
-
-
 
 
 
