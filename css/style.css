@@ -930,6 +930,9 @@ img {
   padding: 0 10px 0 25px;
   border-left: 2px dashed #2E1E25;
 }
+.services__content:target {
+  scroll-margin-top: 100px;
+}
 .services__elements {
   margin: 100px 50px 0 80px;
 }
@@ -1300,6 +1303,9 @@ img {
   padding: 0 10px 0 25px;
   border-left: 2px dashed #2E1E25;
 }
+.portfolio__content:target {
+  scroll-margin-top: 100px;
+}
 .portfolio__slider {
   margin-top: 60px;
   position: relative;
@@ -1632,6 +1638,9 @@ img {
   margin: 0 auto;
   padding: 0 10px 0 25px;
   border-left: 2px dashed #2E1E25;
+}
+.contacts__content:target {
+  scroll-margin-top: 100px;
 }
 .contacts__inner {
   display: -webkit-box;
