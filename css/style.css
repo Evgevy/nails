@@ -465,6 +465,9 @@ img {
   position: relative;
   border-left: 2px dashed #2E1E25;
 }
+.about__content:target {
+  scroll-margin-top: 100px;
+}
 .about__info {
   display: none;
 }
